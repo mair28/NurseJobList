@@ -1,0 +1,484 @@
+diff name:ublock-annoyances lines:3 checksum:df0386943d
+d4 1
+a4 1
+! Diff-Path: ../patches/2025.12.16.826.patch#ublock-annoyances
+diff name:ublock-badware lines:3 checksum:a57f091408
+d4 1
+a4 1
+! Diff-Path: ../patches/2025.12.16.826.patch#ublock-badware
+diff name:ublock-experimental lines:3 checksum:07429e23f8
+d4 1
+a4 1
+! Diff-Path: ../patches/2025.12.16.826.patch#ublock-experimental
+diff name:ublock-filters lines:25 checksum:13db8639df
+d3 2
+a4 2
+! Last modified: Tue, 16 Dec 2025 10:32:12 +0000
+! Diff-Path: ../patches/2025.12.16.826.patch#ublock-filters
+d9596 1
+a9596 1
+advantien.com,bailbondsfinder.com,bg-gledai.*,bigpiecreative.com,childrenslibrarylady.com,classifarms.com,comtasq.ca,crone.es,ctrmarketingsolutions.com,dropnudes.com,ftuapps.dev,gendatabase.com,gledaitv.*,grsprotection.com,gruporafa.com.br,inmatefindcalifornia.com,inmatesearchidaho.com,itsonsitetv.com,mfmfinancials.com,myproplugins.com,nurulislam.org,onehack.us,ovester.com,paste.bin.sx,privatenudes.com,renoconcrete.ca,richieashbeck.com,short1ink.com,stpm.co.uk,wegotcookies.co##+js(no-xhr-if, googlesyndication)
+d9726 1
+a9726 1
+||html-load.com^$script,xhr,redirect=noopjs,domain=1911forum.com|2coolfishing.com|300cforums.com|4btswaps.com|a5oc.com|acuraworld.com|airsoftsociety.com|allfordmustangs.com|allpar.com|aquaticplantcentral.com|astraownersnetwork.co.uk|avsforum.com|babybmw.net|beesource.com|bettafish.com|bimmerforums.co.uk|bimmerwerkz.com|blueovalfanatics.com|cadillacforums.com|caliberforums.com|can-amforum.com|canadianmoneyforum.com|catfish1.com|catforum.com|challengertalk.com|chargerforums.com|chargerforumz.com|cheftalk.com|chevymalibuforum.com|chihuahua-people.com|chinacarforums.com|cichlid-forum.com|civinfo.com|clubsearay.com|clubtouareg.com|clubxterra.org|coloradofans.com|coltforum.com|contractortalk.com|corral.net|cruzetalk.com|cumminsforum.com|cycleforums.com|dairygoatinfo.com|dakota-durango.com|dbstalk.com|defensivecarry.com|detailingworld.co.uk|dieselplace.com|digitalcorvettes.com|digitalhome.ca|diychatroom.com|diyelectriccar.com|diymobileaudio.com|dobermantalk.com|dodgedurango.net|dodgetalk.com|dogforum.com|dsmtalk.com|ducati.ms|ducati.org|ducatimonster.org|duckhuntingchat.com|duramaxforum.com|e46fanatics.com|electriciantalk.com|enclaveforum.net|expatforum.com|f150ecoboost.net|fertilityfriends.co.uk|ffcars.com|firearmstalk.com|fjrowners.com|flyfishing.co.uk|fnforum.net|focaljet.com|focusfanatics.com|focusst.org|focusstoc.com|fordescape.org|fordforums.com|fordfusionclub.com|fordmuscleforums.com|fordtransitusaforum.com|frugalvillage.com|fullsizebronco.com|gencoupe.com|hockeyforum.com|iq-forums.com|k20a.org|kugaownersclub.co.uk|m5board.com|mazda3revolution.com|mdxers.org|msgo.com|mytractorforum.com|odyclub.com|pelotonforum.com|powerstroke.org|powerstrokenation.com|ramchargercentral.com|ramforumz.com|robloxforum.com|rootzwiki.com|sigtalk.com|skyscrapercity.com|speakev.com|speypages.com|srtforums.com|subaruforester.org|subaruoutback.org|talkford.com|techguy.org|techsupportforum.com|theakforum.net|tivocommunity.com|trailvoy.com|trifive.com|tsxclub.com|vwvortex.com|z06vette.com
+d9730 1
+a9730 1
+||html-load.com^$script,xhr,domain=awellstyledlife.com|bakeitwithlove.com|browneyedbaker.com|cookieandkate.com|culinaryhill.com|damndelicious.net|extrapetite.com|feelgoodfoodie.net|happyveggiekitchen.com|homemadehome.com|howsweeteats.com|hummingbirdhigh.com|kimscravings.com|littlehouseliving.com|makeitdairyfree.com|minimalistbaker.com|newlifeonahomestead.com|nocrumbsleft.net|pancakerecipes.com|pumpkinnspice.co|skinnytaste.com|stylegirlfriend.com|the-girl-who-ate-everything.com|themediterraneandish.com|theplantbasedschool.com|therecipecritic.com|thewoksoflife.com|unefemme.net|wellnessbykay.com|workweeklunch.com
+d9789 1
+a9789 1
+1911forum.com,2coolfishing.com,300cforums.com,4btswaps.com,a5oc.com,acuraworld.com,airsoftsociety.com,allfordmustangs.com,allpar.com,aquaticplantcentral.com,astraownersnetwork.co.uk,avsforum.com,babybmw.net,beesource.com,bettafish.com,bimmerforums.co.uk,bimmerwerkz.com,blueovalfanatics.com,cadillacforums.com,caliberforums.com,can-amforum.com,canadianmoneyforum.com,catfish1.com,catforum.com,challengertalk.com,chargerforums.com,chargerforumz.com,cheftalk.com,chevymalibuforum.com,chihuahua-people.com,chinacarforums.com,cichlid-forum.com,civinfo.com,clubsearay.com,clubtouareg.com,clubxterra.org,coloradofans.com,coltforum.com,contractortalk.com,corral.net,cruzetalk.com,cumminsforum.com,cycleforums.com,dairygoatinfo.com,dakota-durango.com,dbstalk.com,defensivecarry.com,detailingworld.co.uk,dieselplace.com,digitalcorvettes.com,digitalhome.ca,diychatroom.com,diyelectriccar.com,diymobileaudio.com,dobermantalk.com,dodgedurango.net,dodgetalk.com,dogforum.com,dsmtalk.com,ducati.ms,ducati.org,ducatimonster.org,duckhuntingchat.com,duramaxforum.com,e46fanatics.com,electriciantalk.com,enclaveforum.net,expatforum.com,f150ecoboost.net,fertilityfriends.co.uk,ffcars.com,firearmstalk.com,fjrowners.com,flyfishing.co.uk,fnforum.net,focaljet.com,focusfanatics.com,focusst.org,focusstoc.com,fordescape.org,fordforums.com,fordfusionclub.com,fordmuscleforums.com,fordtransitusaforum.com,frugalvillage.com,fullsizebronco.com,gencoupe.com,hockeyforum.com,iq-forums.com,k20a.org,kugaownersclub.co.uk,m5board.com,mazda3revolution.com,mdxers.org,msgo.com,mytractorforum.com,odyclub.com,pelotonforum.com,powerstroke.org,powerstrokenation.com,ramchargercentral.com,ramforumz.com,robloxforum.com,rootzwiki.com,sigtalk.com,skyscrapercity.com,speakev.com,speypages.com,srtforums.com,subaruforester.org,subaruoutback.org,talkford.com,techguy.org,techsupportforum.com,theakforum.net,tivocommunity.com,trailvoy.com,trifive.com,tsxclub.com,vwvortex.com,z06vette.com##^script:has-text(html-load.com)
+d9791 1
+a9791 1
+awellstyledlife.com,bakeitwithlove.com,browneyedbaker.com,cookieandkate.com,culinaryhill.com,damndelicious.net,extrapetite.com,feelgoodfoodie.net,happyveggiekitchen.com,homemadehome.com,howsweeteats.com,hummingbirdhigh.com,kimscravings.com,littlehouseliving.com,makeitdairyfree.com,minimalistbaker.com,newlifeonahomestead.com,nocrumbsleft.net,pancakerecipes.com,pumpkinnspice.com,skinnytaste.com,stylegirlfriend.com,the-girl-who-ate-everything.com,themediterraneandish.com,theplantbasedschool.com,therecipecritic.com,thewoksoflife.com,unefemme.net,wellnessbykay.com,workweeklunch.com##^script:has-text(html-load.com)
+d9815 1
+a9815 1
+1911forum.com,2coolfishing.com,300cforums.com,4btswaps.com,a5oc.com,acuraworld.com,airsoftsociety.com,allfordmustangs.com,allpar.com,aquaticplantcentral.com,astraownersnetwork.co.uk,avsforum.com,babybmw.net,beesource.com,bettafish.com,bimmerforums.co.uk,bimmerwerkz.com,blueovalfanatics.com,cadillacforums.com,caliberforums.com,can-amforum.com,canadianmoneyforum.com,catfish1.com,catforum.com,challengertalk.com,chargerforums.com,chargerforumz.com,cheftalk.com,chevymalibuforum.com,chihuahua-people.com,chinacarforums.com,cichlid-forum.com,civinfo.com,clubsearay.com,clubtouareg.com,clubxterra.org,coloradofans.com,coltforum.com,contractortalk.com,corral.net,cruzetalk.com,cumminsforum.com,cycleforums.com,dairygoatinfo.com,dakota-durango.com,dbstalk.com,defensivecarry.com,detailingworld.co.uk,dieselplace.com,digitalcorvettes.com,digitalhome.ca,diychatroom.com,diyelectriccar.com,diymobileaudio.com,dobermantalk.com,dodgedurango.net,dodgetalk.com,dogforum.com,dsmtalk.com,ducati.ms,ducati.org,ducatimonster.org,duckhuntingchat.com,duramaxforum.com,e46fanatics.com,electriciantalk.com,enclaveforum.net,expatforum.com,f150ecoboost.net,fertilityfriends.co.uk,ffcars.com,firearmstalk.com,fjrowners.com,flyfishing.co.uk,fnforum.net,focaljet.com,focusfanatics.com,focusst.org,focusstoc.com,fordescape.org,fordforums.com,fordfusionclub.com,fordmuscleforums.com,fordtransitusaforum.com,frugalvillage.com,fullsizebronco.com,gencoupe.com,hockeyforum.com,iq-forums.com,k20a.org,kugaownersclub.co.uk,m5board.com,mazda3revolution.com,mdxers.org,msgo.com,mytractorforum.com,odyclub.com,pelotonforum.com,powerstroke.org,powerstrokenation.com,ramchargercentral.com,ramforumz.com,robloxforum.com,rootzwiki.com,sigtalk.com,skyscrapercity.com,speakev.com,speypages.com,srtforums.com,subaruforester.org,subaruoutback.org,talkford.com,techguy.org,techsupportforum.com,theakforum.net,tivocommunity.com,trailvoy.com,trifive.com,tsxclub.com,vwvortex.com,z06vette.com##+js(rmnt, script, html-load.com)
+d9817 1
+a9817 1
+awellstyledlife.comm,bakeitwithlove.com,browneyedbaker.com,cookieandkate.com,culinaryhill.com,damndelicious.net,extrapetite.com,feelgoodfoodie.net,happyveggiekitchen.com,homemadehome.com,howsweeteats.com,hummingbirdhigh.com,kimscravings.com,littlehouseliving.com,makeitdairyfree.com,minimalistbaker.com,newlifeonahomestead.com,nocrumbsleft.net,pancakerecipes.com,pumpkinnspice.com,skinnytaste.com,stylegirlfriend.com,the-girl-who-ate-everything.com,themediterraneandish.com,theplantbasedschool.com,therecipecritic.com,thewoksoflife.com,unefemme.net,wellnessbykay.com,workweeklunch.com##+js(rmnt, script, html-load.com)
+diff name:ublock-privacy lines:3 checksum:ee181d2a81
+d4 1
+a4 1
+! Diff-Path: ../patches/2025.12.16.826.patch#ublock-privacy
+diff name:ublock-quick-fixes lines:3 checksum:1857ed366d
+d4 1
+a4 1
+! Diff-Path: ../patches/2025.12.16.826.patch#ublock-quick-fixes
+diff name:ublock-unbreak lines:6 checksum:74f66d479b
+d3 2
+a4 2
+! Last modified: Tue, 16 Dec 2025 08:30:00 +0000
+! Diff-Path: ../patches/2025.12.16.826.patch#ublock-unbreak
+a2792 1
+personality-database.com##+js(set, freestar.newAdSlots, trueFunc)
+diff name:easylist lines:380 checksum:22b26b7ddc
+d4 2
+a5 2
+! Last modified: Tue, 16 Dec 2025 13:26:02 +0000
+! Diff-Path: ../patches/2025.12.16.826.patch#easylist
+a15915 1
+||37ypgvcopejf149frr8bh6tbk9y2.cfd^
+a15924 1
+||39q2f93bvmiz7p8bih8i.cfd^
+a15964 1
+||3u3ymbqj.xyz^
+a16090 1
+||54yc1n1m3in6glzilorrbtr.rest^
+a16317 1
+||7b6c81b4c2.com^
+a16597 1
+||a8659ff8d6.com^
+a16749 1
+||aboydhgy.com^
+a18006 1
+||alcidaefecials.cyou^
+a18018 1
+||alertlyclicks.rest^
+a18201 1
+||amapapish.qpon^
+a18647 1
+||aqexatnj.com^
+a18700 1
+||ardatlom.com^
+a18713 1
+||arfdxfgcmitto.online^
+a18745 1
+||armerprissy.cyou^
+a18850 1
+||ashamed-area.com^
+a18929 1
+||assuredgod.pro^
+a19233 1
+||avjbjbekaarwj.top^
+a19603 1
+||baivifogrouk.com^
+a19817 1
+||bbtweswymiciw.site^
+a20562 1
+||bljyttjldkncq.online^
+a20664 1
+||bncvhvmc.com^
+a20678 1
+||bnhlpsmhvodae.online^
+a20939 1
+||bousesquantalgarnice.cfd^
+a21271 1
+||btoihojqhsjef.space^
+a21292 1
+||bubblytennis.pro^
+a21454 1
+||buvhosznqb.com^
+a21458 1
+||buyerparasitesurveying.com^
+a21906 1
+||catfacenuclein.qpon^
+a22488 1
+||chiveraccede.com^
+a24335 1
+||danglertemantrolley.cyou^
+a24955 1
+||dfplofralyjlc.online^
+a25124 1
+||dingusiserine.com^
+a25407 1
+||dlwezntlxwlqu.website^
+a25416 1
+||dmayrdossomo.com^
+a25563 1
+||donaterefuel.com^
+a25994 1
+||dullassistant.pro^
+a26785 1
+||elianbezazz.cfd^
+a26962 1
+||encyclopaediaforever.com^
+a27114 1
+||eoaextrglkylg.site^
+a27313 1
+||ervrievipczam.site^
+a27614 1
+||existeraswim.qpon^
+a27960 1
+||fatconstant.com^
+a28027 1
+||fcfgnzaozklfp.space^
+a28034 1
+||fcohyloutzebh.website^
+a28042 1
+||fcvpjc87ohq9w9u1uog6g8ppvix6pvwwo9t.cfd^
+a28135 1
+||feltyontalrhd.cyou^
+a28403 1
+||fitting-enthusiasm.pro^
+a28537 1
+||flhtfxbakyelu.space^
+a29350 1
+||fxsdyahhcwykb.website^
+a29970 1
+||giraffefaits.cyou^
+a30136 1
+||glistenbutt.com^
+a30373 1
+||gongmanquothloki.cfd^
+a30671 1
+||grignettugcaunos.cyou^
+a30854 1
+||gtdwcttwvpxdn.online^
+a31116 1
+||gzhpsmonmqoa.com^
+a31122 1
+||gztnnjfknixqv.website^
+a31227 1
+||hamsterregisterlater.com^
+a31335 1
+||hatredspongetrustworthy.com^
+a31348 1
+||haunoatheevoa.com^
+a31416 1
+||hcfarche.help^
+a31539 1
+||heftersampules.help^
+a31761 1
+||highicmodsa.com^
+a32289 1
+||hrinnwqjnfwap.online^
+a32339 1
+||htkyarsmdltca.site^
+a32406 1
+||humming-sea.pro^
+a32918 1
+||iiyfjuaumikou.space^
+a32932 1
+||ijwcnuyyiydhc.website^
+a32993 1
+||iltyooondwxst.online^
+a33220 1
+||indexedmesquit.help^
+a33354 1
+||inpil.shop^
+a33600 1
+||iqvojbqacilzm.website^
+a33798 1
+||iupljdlstqsbf.site^
+a34140 1
+||jeecouthie.cyou^
+a34600 1
+||jqpksqhjjymy.com^
+a35094 1
+||kdxlprsucaagl.com^
+a35629 1
+||kpz6etutervuthj.rest^
+a35648 1
+||kqybzmgmfixof.site^
+a35994 1
+||lamelhyposulfur.cfd^
+a36557 1
+||limostreen.cfd^
+a36635 1
+||litterworerabbit.com^
+a36710 1
+||lklgosaqb.com^
+a36721 1
+||lktrmbptupqcm.site^
+a36766 1
+||llxemmopmuitk.space^
+a36815 1
+||lngrljexega.com^
+a37390 1
+||lyctussoaky.rest^
+a37719 1
+||marzapammoj.com^
+a37830 1
+||mbgbqdrosr.com^
+a38145 1
+||mfomwtxsbaukl.space^
+a38182 1
+||mgnmrxxfbffuoc.com^
+a38458 1
+||mkodhnvnhpmlw.online^
+a38665 1
+||mommygoldi.rest^
+a39087 1
+||mundane-gear.pro^
+a39281 1
+||myl1l6jjxqe3ol7.rest^
+a39530 1
+||nceticjkoo.com^
+a39542 1
+||ncwdvsshgeqdan.com^
+a39644 1
+||nepalboorish.click^
+a39813 1
+||nhgoldhtco.com^
+a40758 1
+||oblocpnaj.com^
+a40806 1
+||occurseactin.com^
+a40882 1
+||odxtwpsygcpgt.space^
+a40889 1
+||oegigehd.com^
+a41332 1
+||onvvn4qughney3le8p64eutrp585zur.rest^
+a41548 1
+||orewoodownhood.qpon^
+a41704 1
+||otices.com^
+a41749 1
+||ouhzizxfdmsbv.site^
+a41952 1
+||owkexlbbybhcsul.com^
+a42254 1
+||parchedtowhees.click^
+a42775 1
+||phagedaormazd.cfd^
+a42898 1
+||phxmlvofapeqj.online^
+a42929 1
+||piddockbarkary.cyou^
+a43077 1
+||pjwlgednp.com^
+a43201 1
+||plodgeauris.qpon^
+a43524 1
+||positivelysketchyenlargement.com^
+a43646 1
+||pqeqxkxlfyyvu.space^
+a43962 1
+||prosectimmured.cyou^
+a44170 1
+||ptbacsniqddolpw.com^
+a44599 1
+||pyxbidiocnkkl.website^
+a44749 1
+||qekbmjyvbbbjj.top^
+a44844 1
+||qhtturyyynhf.com^
+a45280 1
+||qvgfmbuxxbkhl.online^
+a45343 1
+||qxsgambwwkoib.site^
+a45422 1
+||rabzdalyejnzg.site^
+a45779 1
+||rebringmilers.rest^
+a45783 1
+||reccbgesxobut.website^
+a46109 1
+||representationenterprise.com^
+a46309 1
+||rezrboarmmbmk.top^
+a46585 1
+||rli94yrtmutomiixxxx.cfd^
+a46810 1
+||rosebudboileverything.com^
+a46862 1
+||rowansbursal.qpon^
+a47056 1
+||rueoozjioyhzn.site^
+a47133 1
+||ruvsraaklrih.com^
+a47151 1
+||rvtjvfoao.com^
+a47376 1
+||samedoor.pro^
+a48076 1
+||shatanlimbo.shop^
+a48141 1
+||shimmeringissue.pro^
+a48435 1
+||sjowkktmatgny.site^
+a48457 1
+||skdgupwtidft.com^
+a49233 1
+||spynutvurwa.com^
+a49371 1
+||stalelack.pro^
+a49394 1
+||stark-cable.pro^
+a49611 1
+||strangarcheus.help^
+a49692 1
+||stulsopapar.com^
+a49957 1
+||svjpghwlxvmgv.online^
+a50302 1
+||tatteredboyfriend.pro^
+a50358 1
+||tcnaecgsqurme.online^
+a50401 1
+||tebsourtoag.com^
+a50955 1
+||tkamrzuamfues.online^
+a51100 1
+||tokensguggled.com^
+a51409 1
+||travellingpresidentding.com^
+a51457 1
+||tressypet.rest^
+a51495 1
+||triplerbeulah.cyou^
+a51757 1
+||tunerpipile.rest^
+a51907 1
+||tyaxztldkgmmv.website^
+a52063 1
+||uedguaodukmkf.com^
+a52091 1
+||uffntgsdxwyog.online^
+a52183 1
+||uipseknc.com^
+a52291 1
+||umghnfozbbowh.site^
+a52567 1
+||unspedunstiffcotman.cyou^
+a52598 1
+||untucklashers.click^
+a52906 1
+||uunwurerjzml.com^
+a52999 1
+||uzjgpjxsoslxs.site^
+a53441 1
+||vhugacurdtnhz.website^
+a53667 1
+||vlbjvpgzzqyiq.online^
+a53791 1
+||voozogletotou.net^
+a54097 1
+||w1izi6pqhybr5iwhty6qv6mopzp8k7.rest^
+a54165 1
+||wallsquillsoutslid.cyou^
+a54224 1
+||washesanobing.click^
+a54333 1
+||wchegfhscusnd.site^
+a54349 1
+||wcxwaktdmio.com^
+a55052 1
+||woewornsequel.com^
+a55286 1
+||wry-relation.pro^
+a55399 1
+||wwvqboerllbzr.top^
+a55646 1
+||xgzzrivcwjajj.website^
+a55980 1
+||xwoqobfwglw.com^
+a56072 1
+||y4n7m8zic2frkvx9.cfd^
+a56301 1
+||yhthfwhuecsil.website^
+a56788 1
+||zanjonperfix.click^
+a56933 1
+||zfctbjmrmondr.site^
+a57225 1
+||zqvsflsegmijk.website^
+a57328 1
+||zvochalmngvcx.com^
+a57379 1
+||zygnemalorissixteen.cyou^
+a67893 1
+wargamer.com###constellation_promoted_iframe_0
+d69219 1
+a69219 1
+pcgamesn.com,wargamer.com##.ad-injector-potential-slot
+d70811 1
+a70811 1
+aframnews.com,afro.com,animationmagazine.net,aurn.com,aviacionline.com,blackvoicenews.com,borneobulletin.com.bn,brewmasterly.com,businessday.ng,businessofapps.com,carstopia.net,channelnews.com.au,chargedevs.com,chicagodefender.com,chimpreports.com,coinweek.com,collive.com,coralspringstalk.com,dailynews.co.zw,dailysport.co.uk,dallasvoice.com,defence-industry.eu,dieworkwear.com,draxe.com,gadgetbuzz.net,gatewaynews.co.za,gayexpress.co.nz,gematsu.com,hamodia.com,illustrationmaster.com,islandecho.co.uk,jacksonvillefreepress.com,kbla1580.com,lynnwoodtimes.com,marionmugshots.com,marshallradio.net,mediaplaynews.com,moviemaker.com,newpittsburghcourier.com,nondoc.com,placenorthwest.co.uk,postnewsgroup.com,richmondshiretoday.co.uk,sammobile.com,savannahtribune.com,spaceref.com,swling.com,talkers.com,thegolfnewsnet.com,travelandtourworld.com,utdmercury.com,virtualrealitieshub.com,waamradio.com,webpokie.com,womensagenda.com.au##.g
+d72577 1
+a72577 1
+pcgamesn.com,wargamer.com##.sn-placement
+d72580 1
+a72580 1
+pcgamesn.com,wargamer.com##.snigel_ad
+diff name:easyprivacy lines:14 checksum:4542076fe8
+d4 2
+a5 2
+! Last modified: Tue, 16 Dec 2025 04:21:05 +0000
+! Diff-Path: ../patches/2025.12.16.826.patch#easyprivacy
+a3204 1
+/click.comicomi-studio.com/mail/u/*$image
+a7301 1
+||hayweb.net^
+a7318 1
+||highnoongear.com^
+a53954 1
+||ms.vk.ru^
+a54009 1
+||vk.ru/rtrg
+Ñ‡qG      iAp5iAp6Hõ'”iAp6   D    ~FETCH,:https://ublockorigin.pages.dev/patches/2025.12.15.1352.patch strongly-framed 1 security-info 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 request-method GET request-accept-encoding gzip, deflate, br, zstd response-head HTTP/3 200 
+date: Tue, 16 Dec 2025 14:44:04 GMT
+content-type: application/octet-stream
+content-length: 16835
+access-control-allow-origin: *
+cache-control: public, max-age=0, must-revalidate
+etag: "5829424b21961bbe2886b313baa5c462"
+referrer-policy: strict-origin-when-cross-origin
+x-content-type-options: nosniff
+vary: accept-encoding
+report-to: {"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=%2FV8Lt7aDe4Ix6%2BwRY3mz535ZyaQOKjEsM8TG%2FS1M2XLzOe4SEED32wmCjtmZKjgOPRn43JdINAS%2B4tJVvys0LL35YKbZn5XzwvOHvSO7LCYLIpBpB5o%3D"}]}
+nel: {"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}
+priority: u=4,i=?0
+server: cloudflare
+cf-ray: 9aeef4e8bf9c0962-HKG
+alt-svc: h3=":443"; ma=86400
+server-timing: cfExtPri
+X-Firefox-Http3: h3
+ original-response-headers date: Tue, 16 Dec 2025 14:44:04 GMT
+content-type: application/octet-stream
+content-length: 16835
+access-control-allow-origin: *
+cache-control: public, max-age=0, must-revalidate
+etag: "5829424b21961bbe2886b313baa5c462"
+referrer-policy: strict-origin-when-cross-origin
+x-content-type-options: nosniff
+vary: accept-encoding
+report-to: {"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=%2FV8Lt7aDe4Ix6%2BwRY3mz535ZyaQOKjEsM8TG%2FS1M2XLzOe4SEED32wmCjtmZKjgOPRn43JdINAS%2B4tJVvys0LL35YKbZn5XzwvOHvSO7LCYLIpBpB5o%3D"}]}
+nel: {"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}
+priority: u=4,i=?0
+server: cloudflare
+cf-ray: 9aeef4e8bf9c0962-HKG
+alt-svc: h3=":443"; ma=86400
+server-timing: cfExtPri
+ ctid 1 net-response-time-onstart 102 net-response-time-onstop 134   AÃ

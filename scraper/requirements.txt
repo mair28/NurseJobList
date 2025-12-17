@@ -1,0 +1,11 @@
+playwright==1.49.1
+playwright
+camoufox[geoip]
+beautifulsoup4
+lxml
+pandas
+python-dateutil
+schedule
+capsolver
+httpx==2.9.0
+schedule==1.2.2

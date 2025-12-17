@@ -1,0 +1,53 @@
+name: Daily Job Scraper
+
+on:
+  # Run daily at 9 AM UTC (adjust as needed)
+  schedule:
+    - cron: '0 9 * * *'
+  
+  # Allow manual trigger
+  workflow_dispatch:
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      
+      - name: Install dependencies
+        run: |
+          cd scraper
+          pip install -r requirements.txt
+      
+      - name: Run scraper
+        env:
+          # These should be set as GitHub Secrets
+          PROXY_URL: ${{ secrets.PROXY_URL }}
+        run: |
+          cd scraper
+          python requests_scraper.py
+      
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: scraped-jobs-${{ github.run_number }}
+          path: |
+            output/*.csv
+            output/*.json
+          retention-days: 30
+      
+      - name: Commit and push output (optional)
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add output/
+          git diff --staged --quiet || git commit -m "Update scraped jobs $(date +'%Y-%m-%d')"
+          git push
+        continue-on-error: true
