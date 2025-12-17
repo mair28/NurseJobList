@@ -1,11 +1,5 @@
-playwright==1.49.1
-playwright
-camoufox[geoip]
+cloudscraper
 beautifulsoup4
 lxml
-pandas
-python-dateutil
+httpx
 schedule
-capsolver
-httpx==2.9.0
-schedule==1.2.2
