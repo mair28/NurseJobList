@@ -25,9 +25,6 @@ URLS = {
     "remotenurse": "https://remotenurseconnection.com/remote-nursing-job-board/"
 }
 
-# CapSolver API key for Cloudflare Turnstile bypass
-CAPSOLVER_API_KEY = os.environ.get("CAPSOLVER_API_KEY", "CAP-7965DABC0C15D080C4FD38CA3AD2EF5EBA5C71F64B28301E66456EBDAC8161C2")
-
 # Rotating proxy configuration (can be overridden via environment variable)
 PROXY_URL = os.environ.get("PROXY_URL", "http://hiqjuwfu-rotate:xmq4ru7a995q@p.webshare.io:80")
 

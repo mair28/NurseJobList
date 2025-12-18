@@ -17,7 +17,7 @@ except ImportError:
     cloudscraper = None
     print("Warning: cloudscraper not installed. Run: pip install cloudscraper")
 
-from config import URLS, MAX_JOBS_PER_SITE, CAPSOLVER_API_KEY, PROXY_URL
+from config import URLS, MAX_JOBS_PER_SITE, PROXY_URL
 from formatter import JobFormatter
 
 
