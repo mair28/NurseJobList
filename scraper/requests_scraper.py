@@ -375,27 +375,34 @@ class RequestsNurseFernScraper:
 
 async def run_requests_scraper():
     """Run the requests-based scraper."""
-    formatter = JobFormatter()
+    from dedup import filter_new_jobs
+    
+    all_jobs = []
     
     # Scrape Remote Nurse Connection
     remote_scraper = RequestsRemoteNurseScraper()
     remote_jobs = remote_scraper.scrape()
-    formatter.add_jobs(remote_jobs)
+    all_jobs.extend(remote_jobs)
     
     # Scrape NurseFern
     nursefern_scraper = RequestsNurseFernScraper()
     nursefern_jobs = await nursefern_scraper.scrape()
-    formatter.add_jobs(nursefern_jobs)
+    all_jobs.extend(nursefern_jobs)
     
-    # Export both CSV and JSON
-    if formatter.jobs:
+    # Filter out jobs we've already seen
+    new_jobs = filter_new_jobs(all_jobs)
+    
+    # Export only new jobs
+    if new_jobs:
+        formatter = JobFormatter()
+        formatter.add_jobs(new_jobs)
         csv_file = formatter.export_csv()
         json_file = formatter.export_json()
         print(f"\n[Output] CSV saved to: {csv_file}")
         print(f"[Output] JSON saved to: {json_file}")
         print(formatter.get_summary())
     else:
-        print("\n[Output] No jobs scraped")
+        print("\n[Output] No NEW jobs found (all jobs already seen)")
 
 
 def run_scheduled():
