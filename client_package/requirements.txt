@@ -1,0 +1,6 @@
+cloudscraper
+beautifulsoup4
+lxml
+httpx
+schedule
+python-dateutil
