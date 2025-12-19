@@ -1,9 +1,9 @@
 name: Daily Job Scraper
 
 on:
-  # Run every 4 hours
+  # Run once daily at 9 AM UTC
   schedule:
-    - cron: '0 */4 * * *'
+    - cron: '0 9 * * *'
   
   # Allow manual trigger
   workflow_dispatch:
