@@ -4,3 +4,4 @@ lxml
 httpx
 schedule
 python-dateutil
+camoufox[geoip]

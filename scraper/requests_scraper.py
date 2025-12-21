@@ -376,6 +376,7 @@ class RequestsNurseFernScraper:
 async def run_requests_scraper():
     """Run the requests-based scraper."""
     from dedup import filter_new_jobs
+    from nursefern_browser import NurseFernScraper
     
     all_jobs = []
     
@@ -384,9 +385,9 @@ async def run_requests_scraper():
     remote_jobs = remote_scraper.scrape()
     all_jobs.extend(remote_jobs)
     
-    # Scrape NurseFern
-    nursefern_scraper = RequestsNurseFernScraper()
-    nursefern_jobs = await nursefern_scraper.scrape()
+    # Scrape NurseFern using browser (captures 60+ jobs vs 4 from API)
+    nursefern_scraper = NurseFernScraper()
+    nursefern_jobs = await nursefern_scraper.scrape(headless=True)
     all_jobs.extend(nursefern_jobs)
     
     # Filter out jobs we've already seen
