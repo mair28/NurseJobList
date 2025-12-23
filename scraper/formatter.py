@@ -164,7 +164,7 @@ class JobFormatter:
             return emp_type
     
     def export_csv(self, filename: str = None) -> str:
-        """Export formatted jobs to CSV file."""
+        """Export formatted jobs to CSV file. Appends to existing same-day file."""
         if not filename:
             filename = get_output_filename()
         
@@ -174,23 +174,38 @@ class JobFormatter:
             print("[Formatter] No jobs to export")
             return ""
         
-        # Use utf-8-sig for Excel compatibility (includes BOM)
+        # Load existing jobs from the file if it exists
+        existing_jobs = []
+        if os.path.exists(filename):
+            try:
+                with open(filename, "r", encoding="utf-8-sig") as f:
+                    reader = csv.DictReader(f)
+                    existing_jobs = list(reader)
+                print(f"[Formatter] Found {len(existing_jobs)} existing jobs in {filename}")
+            except Exception as e:
+                print(f"[Formatter] Could not read existing file: {e}")
+        
+        # Combine existing + new jobs
+        all_jobs = existing_jobs + formatted_jobs
+        
+        # Re-sort by date_posted descending (latest first)
+        all_jobs.sort(key=lambda x: self._parse_date_for_sort(x.get("date_posted", "")), reverse=True)
+        
+        # Write all jobs to file
         with open(filename, "w", newline="", encoding="utf-8-sig") as f:
             writer = csv.DictWriter(f, fieldnames=OUTPUT_COLUMNS)
             writer.writeheader()
             
-            for job in formatted_jobs:
-                # Only write columns defined in OUTPUT_COLUMNS
+            for job in all_jobs:
                 row = {}
                 for col in OUTPUT_COLUMNS:
                     val = job.get(col, "")
-                    # Clean any problematic characters
                     if isinstance(val, str):
                         val = self._clean_for_csv(val)
                     row[col] = val
                 writer.writerow(row)
         
-        print(f"[Formatter] Exported {len(formatted_jobs)} jobs to {filename}")
+        print(f"[Formatter] Exported {len(all_jobs)} total jobs ({len(formatted_jobs)} new) to {filename}")
         return filename
     
     def _clean_for_csv(self, text: str) -> str:
@@ -212,7 +227,7 @@ class JobFormatter:
         return text.strip()
     
     def export_json(self, filename: str = None) -> str:
-        """Export formatted jobs to JSON file."""
+        """Export formatted jobs to JSON file. Appends to existing same-day file."""
         if not filename:
             filename = get_output_filename().replace(".csv", ".json")
         
@@ -222,10 +237,26 @@ class JobFormatter:
             print("[Formatter] No jobs to export")
             return ""
         
-        with open(filename, "w", encoding="utf-8") as f:
-            json.dump(formatted_jobs, f, indent=2, ensure_ascii=False)
+        # Load existing jobs from the file if it exists
+        existing_jobs = []
+        if os.path.exists(filename):
+            try:
+                with open(filename, "r", encoding="utf-8") as f:
+                    existing_jobs = json.load(f)
+                print(f"[Formatter] Found {len(existing_jobs)} existing jobs in {filename}")
+            except Exception as e:
+                print(f"[Formatter] Could not read existing file: {e}")
         
-        print(f"[Formatter] Exported {len(formatted_jobs)} jobs to {filename}")
+        # Combine existing + new jobs
+        all_jobs = existing_jobs + formatted_jobs
+        
+        # Re-sort by date_posted descending (latest first)
+        all_jobs.sort(key=lambda x: self._parse_date_for_sort(x.get("date_posted", "")), reverse=True)
+        
+        with open(filename, "w", encoding="utf-8") as f:
+            json.dump(all_jobs, f, indent=2, ensure_ascii=False)
+        
+        print(f"[Formatter] Exported {len(all_jobs)} total jobs ({len(formatted_jobs)} new) to {filename}")
         return filename
     
     def get_summary(self) -> Dict:
