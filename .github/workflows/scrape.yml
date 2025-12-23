@@ -27,7 +27,13 @@ jobs:
         run: |
           cd scraper
           pip install -r requirements.txt
-          python -m camoufox fetch
+          # Retry camoufox fetch up to 3 times (handles transient 504 errors)
+          for i in 1 2 3; do
+            echo "Attempt $i: Fetching camoufox browser..."
+            python -m camoufox fetch && break
+            echo "Attempt $i failed, waiting 10 seconds..."
+            sleep 10
+          done
       
       - name: Run scraper
         env:
