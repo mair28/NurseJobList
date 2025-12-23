@@ -35,15 +35,38 @@ class NurseFernScraper:
                 print("[NurseFern] Waiting for content to load...")
                 await asyncio.sleep(10)
                 
-                # Scroll to load all job cards
-                print("[NurseFern] Scrolling to load all jobs...")
-                for i in range(15):
-                    await page.evaluate("window.scrollBy(0, 600)")
-                    await asyncio.sleep(0.5)
+                # Scroll to load ALL job cards (lazy loading - need to scroll to bottom)
+                print("[NurseFern] Scrolling to load all jobs (lazy loading)...")
+                last_height = 0
+                scroll_count = 0
+                max_scrolls = 50  # Safety limit
+                
+                while scroll_count < max_scrolls:
+                    # Scroll down
+                    await page.evaluate("window.scrollBy(0, 1500)")
+                    await asyncio.sleep(1)  # Wait for lazy load
+                    
+                    # Get new height
+                    new_height = await page.evaluate("document.body.scrollHeight")
+                    
+                    scroll_count += 1
+                    if scroll_count % 10 == 0:
+                        print(f"[NurseFern] Scrolled {scroll_count} times, page height: {new_height}")
+                    
+                    # Check if we've reached the bottom
+                    if new_height == last_height:
+                        # Try one more scroll to be sure
+                        await page.evaluate("window.scrollBy(0, 2000)")
+                        await asyncio.sleep(1.5)
+                        final_height = await page.evaluate("document.body.scrollHeight")
+                        if final_height == new_height:
+                            print(f"[NurseFern] Reached bottom after {scroll_count} scrolls")
+                            break
+                    
+                    last_height = new_height
                 
                 # Scroll back to top
                 await page.evaluate("window.scrollTo(0, 0)")
-                await asyncio.sleep(2)
                 
                 # Get all job cards using the correct selector
                 # Job cards have class: clickable-element bubble-element Group baTaHhaH
