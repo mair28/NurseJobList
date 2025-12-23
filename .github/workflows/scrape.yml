@@ -52,11 +52,18 @@ jobs:
             output/*.json
           retention-days: 30
       
-      - name: Commit and push output (optional)
+      - name: Commit and push output
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           git add output/
           git diff --staged --quiet || git commit -m "Update scraped jobs $(date +'%Y-%m-%d')"
-          git push
-        continue-on-error: true
+          # Pull latest changes and rebase to handle concurrent updates
+          git pull --rebase origin main || true
+          # Retry push up to 3 times in case of conflicts
+          for i in 1 2 3; do
+            git push && break
+            echo "Push attempt $i failed, pulling and retrying..."
+            git pull --rebase origin main
+            sleep 2
+          done
