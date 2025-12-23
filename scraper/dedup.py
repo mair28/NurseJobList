@@ -13,12 +13,14 @@ SEEN_JOBS_FILE = os.path.join(os.path.dirname(__file__), "..", "output", "seen_j
 
 
 def get_job_hash(job: Dict) -> str:
-    """Generate a unique hash for a job based on title, company, and apply link."""
-    # Use apply_link as primary identifier, fallback to title+company
-    key = job.get("apply_link", "")
-    if not key:
-        key = f"{job.get('job_title', '')}-{job.get('company', '')}"
+    """Generate a unique hash for a job based on title, company, and source."""
+    # Always use title + company + source for unique identification
+    # apply_link is often generic (e.g., site homepage) and causes collisions
+    title = job.get("job_title", "").strip().lower()
+    company = job.get("company", "").strip().lower()
+    source = job.get("source_site", "").strip().lower()
     
+    key = f"{title}-{company}-{source}"
     return hashlib.md5(key.encode()).hexdigest()
 
 
