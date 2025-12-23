@@ -33,7 +33,19 @@ class JobFormatter:
             formatted_job = self._format_job(job)
             formatted.append(formatted_job)
         
+        # Sort by date_posted descending (latest first/top, oldest last/bottom)
+        formatted.sort(key=lambda x: self._parse_date_for_sort(x.get("date_posted", "")), reverse=True)
+        
         return formatted
+    
+    def _parse_date_for_sort(self, date_str: str) -> datetime:
+        """Parse date string for sorting. Returns min date if parsing fails."""
+        if not date_str:
+            return datetime.min
+        try:
+            return date_parser.parse(date_str, fuzzy=True)
+        except:
+            return datetime.min
     
     def _format_job(self, job: Dict) -> Dict:
         """Format a single job entry."""
